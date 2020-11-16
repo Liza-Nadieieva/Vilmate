@@ -1,0 +1,137 @@
+body {
+  background-color: #F5F4F8; /* Lightblue */
+  margin: 0;
+}
+.header {
+  width: 100%;
+  height: 75px;
+  background-color: #fff;
+}
+.header .logo {
+  margin: 2px 50px;
+  float: left;
+}
+.header .logo img {
+  width: 75px;
+  height: 72px;
+}
+
+.guest-navbar,
+.user-navbar {
+  margin-top: 18px;
+  float: right;
+}
+
+/* ========== Guest ========== */
+
+.guest-navbar {
+  display: inline-flex;
+  width: 200px;
+}
+.user-authenticated .guest-navbar {
+  display: none;
+}
+
+/* ========== Authenticated ========== */
+
+.user-navbar {
+  display: none;
+  width: 280px;
+}
+.user-authenticated .user-navbar {
+  display: inline-flex;
+}
+.user-navbar .user-avatar {
+  margin-left: 15px;
+}
+.user-navbar .user-avatar img {
+  height: 35px;
+  width: 40px;
+}
+
+@media screen and (min-width: 480px) and (max-width: 800px)  {
+  .logo {
+    margin:0;
+  }
+  .user-navbar .home-icon,
+  .user-navbar .edit-icon,
+  .user-navbar .notification-icon,
+  .guest-navbar .home-icon,
+  .guest-navbar .user-icon span {
+    display: none;
+  }
+  .guest-navbar .menu-icon {
+    margin-left: 20px;
+  }
+  .guest-navbar .user-icon {
+    margin: 0;
+  }
+  .user-navbar {
+    width: 100px;
+  }
+  .guest-navbar {
+    width: 70px;
+  }
+}
+
+/* ========== Icons ========== */
+
+.home-icon,
+.user-icon,
+.edit-icon,
+.menu-icon,
+.notification-icon {
+  cursor: pointer;
+}
+
+.home-icon i,
+.user-icon i,
+.edit-icon i,
+.menu-icon i,
+.notification-icon i {
+  margin-top: 10px;
+  color: #8169AB; /* Pink */
+}
+
+.edit-icon,
+.home-icon,
+.notification-icon {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #F5F4F8; /* Lightblue */
+  text-align: center;
+  margin-left:20px;
+}
+.edit-icon {
+  background-color: #6DDA9D; /* Green */
+}
+.edit-icon i {
+  color: #fff;
+}
+.user-icon {
+  margin-left: 20px;
+  margin-right: 50px;
+}
+.user-icon span {
+  position: absolute;
+  margin-top: 11px;
+  margin-left: 10px;
+  font-size: 12px;
+  font-family: sans-serif;
+  color: #8169AB; /* Pink */
+}
+.menu-icon {
+  margin-left:15px;
+}
+.notification-icon > .number {
+  position: absolute;
+  width:12px;
+  height:12px;
+  margin-left:24px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 10px;
+  color: #fff;
+  background-color: red;
+}
